@@ -46,41 +46,4 @@ class AppController extends Controller
 
         return redirect('data-wisata');
     }
-    public function edit_pegawai($id){
-        $pegawai = Pegawai::where("id",$id)->first();
-
-        if(!$pegawai){
-            abort(404);
-       }
-
-       $data = ([
-            "pegawai" => $pegawai
-       ]);
-        
-        return view("edit_pegawai",$data);
-    }
-    public function proses_edit_pegawai(Request $request){
-        $id = $request->id;
-        $nip = $request->nip;
-        $nama = $request->nama;
-        $jk = $request->jk;
-        $tempat_lahir = $request->tempat_lahir;
-        $tgl_lahir = $request->tgl_lahir;
-        $hp = $request->hp;
-        $alamat = $request->alamat;
-
-        Pegawai::where("id",$id)->update([
-            "nip" => $nip,
-            "nama" => $nama,
-            "jk" => $jk,
-            "tempat_lahir" => $tempat_lahir,
-            "tgl_lahir" => $tgl_lahir,
-            "hp" => $hp,
-            "alamat" => $alamat
-        ]);
-
-        session()->flash("pesan","Data Berhasil Diedit");
-
-        return redirect("data-pegawai/".$id."/edit");
-    }
 }
