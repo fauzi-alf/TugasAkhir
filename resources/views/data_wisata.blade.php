@@ -5,7 +5,7 @@ data_pegawai
 @endsection
 
 @section("content")
-<a href="{{url('form-tambah')}}" class="btn btn-sm btn-primary">TAMBAH</a>
+<a href="{{url('tambah-wisata')}}" class="btn btn-sm btn-primary">TAMBAH</a>
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
