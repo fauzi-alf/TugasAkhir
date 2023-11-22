@@ -9,6 +9,10 @@ Home
 <hr>
 <img src="{{url('/assets/p.jpeg')}}" class="img-fluid">
 <hr>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae facere quos repellat quidem dolore esse vel saepe quia. Molestiae voluptatem tenetur a, fuga quasi sequi. Cupiditate accusantium culpa voluptatibus voluptatem!</p>
-
+<<div class="jumbotron jumbotron-fluid text-center">
+    <div class="container">
+        <h1 class="display-4">Selamat Datang di Wisata Indonesia</h1>
+        <p class="lead">Temukan keindahan dan keunikan tempat wisata di seluruh Indonesia.</p>
+    </div>
+</div>
 @endsection

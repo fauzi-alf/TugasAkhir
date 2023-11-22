@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\AppController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,10 +13,6 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get("home",[AppController::class,"home"]);
 Route::get("data-pegawai",[AppController::class,"data_pegawai"]);

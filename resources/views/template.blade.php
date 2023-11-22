@@ -12,21 +12,19 @@
             text-decoration: none;
         }
     </style>
-    <ul class="nav  navbar-dark bg-dark">
-        <li class="nav-item">
-            <a href="{{url('/')}}" class="nav-link">Home</a>
-        </li>
-        <li class="nav-item">
-            <a href="{{url('profil')}}" class="nav-link">Profile</a>
-        </li>
-        <li class="nav-item">
-            <a href="{{url('kontak')}}" class="nav-link">Kontak</a>
-        </li>
-        <li class="nav-item">
-            <a href="{{url('data-pegawai')}}" class="nav-link">Data Pegawai</a>
-        </li>
-        
-    </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Wisata Indonesia</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ url('/data-wisata') }}">Data Wisata</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <div class="container">
     <h1>@yield("tittle")</h1>
     <hr>
