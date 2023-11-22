@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get("home",[AppController::class,"home"]);
+Route::get("data-pegawai",[AppController::class,"data_pegawai"]);
