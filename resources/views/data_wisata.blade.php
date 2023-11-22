@@ -1,7 +1,7 @@
 @extends("template")
 
 @section("tittle")
-data_pegawai
+data_wisata
 @endsection
 
 @section("content")
