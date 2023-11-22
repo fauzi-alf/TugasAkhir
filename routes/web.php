@@ -13,6 +13,6 @@ use App\Http\Controllers\AppController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+Route::get('/',[AppController::class,"home"]);
 Route::get("home",[AppController::class,"home"]);
-Route::get("data-pegawai",[AppController::class,"data_pegawai"]);
+Route::get("data-wisata",[AppController::class,"data_wisata"]);

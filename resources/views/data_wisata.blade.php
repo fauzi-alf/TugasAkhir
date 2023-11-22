@@ -9,14 +9,14 @@ data_pegawai
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
-            <th class="text-center">No</th>
-            <th class="text-center">NIP</th>
+            <th class="text-center">ID</th>
             <th class="text-center">Nama</th>
-            <th class="text-center">L/P</th>
-            <th class="text-center">Tempat, Tanggal Lahir</th>
-            <th class="text-center">HP</th>
-            <th class="text-center">Alamat</th>
-            <th class="text-center">Deleto</th>
+            <th class="text-center">Lokasi</th>
+            <th class="text-center">detail</th>
+            <th class="text-center">Hari Kerja</th>
+            <th class="text-center">Jam kerja</th>
+            <th class="text-center">Harga</th>
+            <th class="text-center">Deleto, Lo Siento</th>
         </tr>
     </thead>
     
@@ -24,18 +24,17 @@ data_pegawai
         <?php
         $no = 0;
         ?>
-        @foreach($pegawai as $data)
-        <?php $no++; ?>
+        @foreach($destinations as $data)
+        <!-- <?php $no++; ?> -->
         <tr>
-        <td class="text-center">{{$no}}</td>
-        <td class="text-center">{{ $data->nip}}</td>
-        <td>{{$data->nama}}</td>
-        <td class="text-center">{{$data->jk}}</td>
-        <td class="text-center">{{ $data->tempat_lahir}}, {{ date("d-m-Y",strtotime($data->tgl_lahir))}}</td>
-        <td>{{$data->hp}}</td>
-        <td class="text-center">{{$data->alamat}}</td>
-        <td class="text-center"><a class="btn btn-sm btn-danger" onclick="return confirm('Lo siento {{$data->nama}}.?')" href="{{ url('data-pegawai/'.$data->id.'/hapus')}}">DELETO</a></td>
-        <td class="text-center"><a class="btn btn-sm btn-success"  href="{{ url('data-pegawai/'.$data->id.'/edit')}}">LO SIENTO</a></td>
+        <td class="text-center">{{$id}}</td>
+        <td class="text-center">{{ $data->nama}}</td>
+        <td class="text-center">{{$data->location}}</td>
+        <td class="text-center">{{$data->details}}</td>
+        <td class="text-center">{{$data->day_open}}</td>
+        <td class="text-center">{{$data->time_open}}</td>
+        <td class="text-center"><a class="btn btn-sm btn-danger" onclick="return confirm('Lo siento {{$data->nama}}.?')" href="{{ url('data-wisata/'.$data->id.'/hapus')}}">DELETO</a></td>
+        <td class="text-center"><a class="btn btn-sm btn-success"  href="{{ url('data-wisata/'.$data->id.'/edit')}}">LO SIENTO</a></td>
         </tr>
         
         @endforeach

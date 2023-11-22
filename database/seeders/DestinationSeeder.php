@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Destinations;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -32,6 +33,6 @@ class DestinationSeeder extends Seeder
             ])
         ]);
 
-        Pegawai::insert($destinations);
+        Destinations::insert($destinations);
     }
 }
