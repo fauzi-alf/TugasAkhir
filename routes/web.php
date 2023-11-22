@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\AppController;
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +13,9 @@ use App\Http\Controllers\AppController;
 |
 */
 
-Route::get("home",[AppController::class,"home"]);
-Route::get("data-pegawai",[AppController::class,"data_pegawai"]);
+Route::get('/', function () {
+    return view('home');
+});
+
+Route::get("/",[AppController::class,"home"]);
+Route::get("data-wisata",[AppController::class,"data_wisata"]);
