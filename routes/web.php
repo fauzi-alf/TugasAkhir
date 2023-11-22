@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\AppController;
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +12,10 @@ use App\Http\Controllers\AppController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/',[AppController::class,"home"]);
-Route::get("home",[AppController::class,"home"]);
+
+Route::get('/', function () {
+    return view('home');
+});
+
+Route::get("/",[AppController::class,"home"]);
 Route::get("data-wisata",[AppController::class,"data_wisata"]);
