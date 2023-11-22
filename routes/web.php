@@ -19,3 +19,11 @@ Route::get('/', function () {
 
 Route::get("/",[AppController::class,"home"]);
 Route::get("data-wisata",[AppController::class,"data_wisata"]);
+
+Route::get("data-wisata/{id}/hapus",[AppController::class,"data_wisata"]);
+
+Route::get('tambah-wisata', [AppController::class, 'tambah_wisata']);
+Route::post('tambah-wisata', [AppController::class, 'proses_tambah_wisata']);
+
+Route::get("data-wisata/{id}/edit",[AppController::class,"edit_wisata"]);
+Route::post('edit-wisata', [AppController::class, 'proses_edit_wisata']);
