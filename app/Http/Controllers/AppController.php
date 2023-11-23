@@ -26,7 +26,7 @@ class AppController extends Controller
         return view("tambah_wisata");
     }
     public function proses_tambah_wisata(Request $request){
-        $nama = $request->nama;
+        $name = $request->name;
         $location = $request->location;
         $details = $request->details;
         $day_open = $request->day_open;
@@ -34,7 +34,7 @@ class AppController extends Controller
         $pricing = $request->pricing;
 
         Destinations::create([
-            "nama" => $nama,
+            "name" => $name,
             "location" => $location,
             "details" => $details,
             "day_open" => $day_open,

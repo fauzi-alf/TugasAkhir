@@ -21,7 +21,7 @@ Route::get("/",[AppController::class,"home"]);
 Route::get("data-wisata",[AppController::class,"data_wisata"]);
 
 Route::get('tambah-wisata', [AppController::class, 'tambah_wisata']);
-Route::post('tambah-wisata', [AppController::class, 'tambah'])->name('destinations.tambah');
+Route::post('proses-tambah-wisata', [AppController::class, 'proses_tambah_wisata'])->name('destinations.tambah');
 
 Route::get("data-wisata/{id}/hapus",[AppController::class,"hapus_wisata"]);
 
