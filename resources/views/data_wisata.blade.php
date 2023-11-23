@@ -21,20 +21,18 @@ data_wisata
     </thead>
     
     <tbody>
-        <?php
-        $id = 0;
-        ?>
+
         @foreach($destinations as $data)
-        <!-- <?php $id++; ?> -->
+
         <tr>
-        <td class="text-center">{{$id++}}</td>
+        <td class="text-center">{{$data->id}}</td>
         <td class="text-center">{{$data->name}}</td>
         <td class="text-center">{{$data->location}}</td>
         <td class="text-center">{{$data->details}}</td>
         <td class="text-center">{{$data->day_open}}</td>
         <td class="text-center">{{$data->time_open}}</td>
         <td class="text-center">{{$data->pricing}}</td>
-        <td class="text-center"><a class="btn btn-sm btn-danger" onclick="return confirm('Lo siento {{$data->nama}}.?')" href="{{ url('data-wisata/'.$data->id.'/hapus')}}">DELETO</a></td>
+        <td class="text-center"><a class="btn btn-sm btn-danger" onclick="return confirm('Lo siento {{$data->name}}.?')" href="{{ url('data-wisata/'.$data->id.'/hapus')}}">DELETO</a></td>
         <td class="text-center"><a class="btn btn-sm btn-success"  href="{{ url('data-wisata/'.$data->id.'/edit')}}">LO SIENTO</a></td>
         </tr>
         

@@ -46,6 +46,15 @@ class AppController extends Controller
 
         return redirect('data-wisata');
     }
+    public function edit_wisata($id){
+        $destinations = Destinations::find($id);
+    
+        if (!$destinations) {
+            abort(404);
+        }
+    
+        return view("edit_wisata", ['destinations' => $destinations]);
+    }
     public function proses_edit_wisata(Request $request){
         $id = $request->id;
         $name = $request->name;
@@ -68,6 +77,6 @@ class AppController extends Controller
 
         session()->flash("pesan","Data Berhasil Diedit");
 
-        return redirect("data-pegawai/".$id."/edit");
+        return redirect("data-wisata/".$id."/edit");
     }
 }

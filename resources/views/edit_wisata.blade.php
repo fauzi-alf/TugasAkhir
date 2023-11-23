@@ -12,10 +12,10 @@ TAMBAH DATAH
 <table class="table table-bordered table-striped">
 <form action="{{ route('destinations.edit') }}" method="POST">
     @csrf
-    
+    <input type="hidden" name="id" value="{{ $destinations->id }}">
     <div class="form-group mb-2">
         <label for="nama">Nama</label>
-        <input type="text" name="nama"value="{{$destinations->nama}}" class="form-control bg-warning" id="nama"required>
+        <input type="text" name="name"value="{{$destinations->name}}" class="form-control bg-warning" id="name"required>
     </div>
    
 
