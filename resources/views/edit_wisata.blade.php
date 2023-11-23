@@ -10,7 +10,7 @@ TAMBAH DATAH
 </style>
 <div class="card shadow bg-tranparents px-5 py-5">
 <table class="table table-bordered table-striped">
-<form action="{{ route('destinations.tambah') }}" method="POST">
+<form action="{{ route('destinations.edit') }}" method="POST">
     @csrf
     
     <div class="form-group mb-2">

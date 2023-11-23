@@ -46,4 +46,28 @@ class AppController extends Controller
 
         return redirect('data-wisata');
     }
+    public function proses_edit_wisata(Request $request){
+        $id = $request->id;
+        $name = $request->name;
+        $location = $request->location;
+        $details = $request->details;
+        $day_open = $request->day_open;
+        $time_open = $request->time_open;
+        $pricing = $request->pricing;
+        
+
+        Destinations::where("id",$id)->update([
+            "name" => $name,
+            "location" => $location,
+            "details" => $details,
+            "day_open" => $day_open,
+            "time_open" => $time_open,
+            "pricing" => $pricing
+            
+        ]);
+
+        session()->flash("pesan","Data Berhasil Diedit");
+
+        return redirect("data-pegawai/".$id."/edit");
+    }
 }

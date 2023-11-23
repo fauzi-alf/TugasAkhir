@@ -14,8 +14,8 @@ TAMBAH DATAH
     @csrf
     
     <div class="form-group mb-2">
-        <label for="nama">Nama</label>
-        <input type="text" name="nama" class="form-control bg-warning" id="nama"required>
+        <label for="name">Nama</label>
+        <input type="text" name="name" class="form-control bg-warning" id="name" required>
     </div>
    
 

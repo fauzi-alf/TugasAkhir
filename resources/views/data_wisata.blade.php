@@ -22,13 +22,13 @@ data_wisata
     
     <tbody>
         <?php
-        $no = 0;
+        $id = 0;
         ?>
         @foreach($destinations as $data)
-        <!-- <?php $no++; ?> -->
+        <!-- <?php $id++; ?> -->
         <tr>
-        <td class="text-center">{{$id}}</td>
-        <td class="text-center">{{ $data->nama}}</td>
+        <td class="text-center">{{$id++}}</td>
+        <td class="text-center">{{$data->name}}</td>
         <td class="text-center">{{$data->location}}</td>
         <td class="text-center">{{$data->details}}</td>
         <td class="text-center">{{$data->day_open}}</td>
