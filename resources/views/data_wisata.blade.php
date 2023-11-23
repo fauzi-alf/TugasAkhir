@@ -32,8 +32,7 @@ data_wisata
         <td class="text-center">{{$data->day_open}}</td>
         <td class="text-center">{{$data->time_open}}</td>
         <td class="text-center">{{$data->pricing}}</td>
-        <td class="text-center"><a class="btn btn-sm btn-danger" onclick="return confirm('Lo siento {{$data->name}}.?')" href="{{ url('data-wisata/'.$data->id.'/hapus')}}">DELETO</a></td>
-        <td class="text-center"><a class="btn btn-sm btn-success"  href="{{ url('data-wisata/'.$data->id.'/edit')}}">LO SIENTO</a></td>
+        <td class="text-center"><a class="btn btn-sm btn-danger" onclick="return confirm('Lo siento {{$data->name}}.?')" href="{{ url('data-wisata/'.$data->id.'/hapus')}}">DELETO</a><a class="btn btn-sm btn-success"  href="{{ url('data-wisata/'.$data->id.'/edit')}}">LO SIENTO</a></td>
         </tr>
         
         @endforeach
