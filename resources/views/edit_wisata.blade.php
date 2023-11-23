@@ -25,7 +25,7 @@ TAMBAH DATAH
     </div>
     <div class="form-group mb-2">
         <label for="details">Detail </label>
-        <input type="date" name="details"value="{{$destinations->details}}" class="form-control bg-primary" id="details">
+        <input type="text" name="details"value="{{$destinations->details}}" class="form-control bg-primary" id="details">
     </div>
     <div class="form-group mb-2">
         <label for="day_open">Hari Buka</label>
@@ -35,13 +35,21 @@ TAMBAH DATAH
         <label for="time_open">Jam Buka</label>
         <input type="text" name="time_open"value="{{$destinations->time_open}}" class="form-control bg-info" id="time_open">
     </div>
-    <div class="form-group mb-2">
-        <label for="time_open">Harga</label>
-        <input type="text" name="pricing"value="{{$destinations->pricing}}" class="form-control bg-info" id="pricing">
+    <div class="form-check mb-2">
+    <label for="pricing">Keterangan</label><br>
+    <div class="form-check form-check-inline">
+        
+        <label class="form-check-label " for="Free">
+            <input class="form-check-input bg-danger" type="radio" name="pricing" value="Free" id="pricing" <?=($destinations->pricing == "Free")? "checked" :""?>>Free</label>
     </div>
+    <div class="form-check form-check-inline">
+        
+        <label class="form-check-label " for="Paid"><input class="form-check-input bg-danger" type="radio" name="pricing" value="Paid" id="pricing" <?=($destinations->pricing == "Paid")? "checked" :""?>>Paid</label>
+    </div>
+</div>
     
     <button type="submit" class="btn mt-3 btn-sm btn-primary">Simpan</button><br>
-    <a href="{{ url('data-destinations') }}" class="btn mt-3 btn-sm btn-primary">Kembali</a>
+    <a href="{{ url('data-wisata') }}" class="btn mt-3 btn-sm btn-primary">Kembali</a>
 </form>
 </table>
 </div>
