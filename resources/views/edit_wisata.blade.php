@@ -38,13 +38,12 @@ TAMBAH DATAH
     <div class="form-check mb-2">
     <label for="pricing">Keterangan</label><br>
     <div class="form-check form-check-inline">
-        
         <label class="form-check-label " for="Free">
-            <input class="form-check-input bg-danger" type="radio" name="pricing" value="Free" id="pricing" <?=($destinations->pricing == "Free")? "checked" :""?>>Free</label>
+        <input class="form-check-input bg-danger" type="radio" name="pricing" value="Free" id="pricing" <?=($destinations->pricing == "Free")? "checked" :""?>>Free</label>
     </div>
     <div class="form-check form-check-inline">
-        
-        <label class="form-check-label " for="Paid"><input class="form-check-input bg-danger" type="radio" name="pricing" value="Paid" id="pricing" <?=($destinations->pricing == "Paid")? "checked" :""?>>Paid</label>
+        <label class="form-check-label " for="Paid">
+        <input class="form-check-input bg-danger" type="radio" name="pricing" value="Paid" id="pricing" <?=($destinations->pricing == "Paid")? "checked" :""?>>Paid</label>
     </div>
 </div>
     
