@@ -37,7 +37,7 @@ $id++
         <td class="text-center p-2 m-2">{{$data->day_open}}</td>
         <td class="text-center p-2 m-2">{{$data->time_open}}</td>
         <td class="text-center p-2 m-2">{{$data->pricing}}</td>
-        <td class="text-center p-2 m-2"><a class="btn btn-sm btn-danger m-1 p-1" onclick="return confirm('Lo siento {{$data->name}}.?')" href="{{ url('data-wisata/'.$data->id.'/hapus')}}">DELETO</a><a class="btn btn-sm btn-success p-1 m-1"  href="{{ url('data-wisata/'.$data->id.'/edit')}}">EL EDITO</a></td>
+        <td class="text-center p-2 m-2"><a class="btn btn-sm btn-danger m-1 p-1" onclick="return confirm('Lo siento {{$data->name}}.?')" href="{{ url('data-wisata/'.$data->id.'/hapus')}}">Hapus</a><a class="btn btn-sm btn-success p-1 m-1"  href="{{ url('data-wisata/'.$data->id.'/edit')}}">Edit</a></td>
         </tr>
         
         @endforeach
