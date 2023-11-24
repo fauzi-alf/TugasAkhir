@@ -42,7 +42,7 @@ class AppController extends Controller
             "pricing" => $pricing
         ]);
 
-        session()->flash("pesan","Berhasil Ditambah");
+        session()->flash("pesan"," Data Berhasil Ditambah");
 
         return redirect('data-wisata');
     }

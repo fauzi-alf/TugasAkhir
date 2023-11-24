@@ -1,22 +1,22 @@
 @extends("template")
 
 @section("tittle")
-data_wisata
+Data Wisata
 @endsection
 
 @section("content")
-<a href="{{url('tambah-wisata')}}" class="btn btn-sm btn-primary">TAMBAH</a>
+<a href="{{url('tambah-wisata')}}" class="btn btn-sm btn-primary">Tambah</a>
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
-            <th class="text-center">ID</th>
+            <th class="text-center">No.</th>
             <th class="text-center">Nama</th>
             <th class="text-center">Lokasi</th>
             <th class="text-center">detail</th>
             <th class="text-center">Hari Kerja</th>
             <th class="text-center">Jam kerja</th>
             <th class="text-center">Harga</th>
-            <th class="text-center">Deleto, Lo Siento</th>
+            <th class="text-center">Hapus/Edit</th>
         </tr>
     </thead>
     
