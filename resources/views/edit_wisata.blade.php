@@ -1,6 +1,6 @@
 @extends('template')
 @section("tittle")
-TAMBAH DATAH
+Edit Data
 @endsection
 @section('content')
 <style>
