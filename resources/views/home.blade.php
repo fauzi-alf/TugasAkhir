@@ -1,14 +1,24 @@
 @extends("template")
 
 @section("tittle")
-Home
+
 @endsection
 
-@section("content")
-<div class="jumbotron jumbotron-fluid text-center">
-    <div class="container">
-        <h1 class="display-4">Selamat Datang di Wisata Indonesia Raya Nyuak</h1>
-        <p class="lead">Temukan keindahan dan keunikan tempat wisata di seluruh Indonesia.</p>
-    </div>
-</div>
+@section("content2")
+
+<section class="section main-banner" id="top" data-section="section1">
+      <video autoplay muted loop id="bg-video" class="video-background-content">
+          <source src="{{ url('myAssets/assets/images/pmdgn.mp4') }}" type="video/mp4" />
+      </video>
+
+      <div class="video header-text">
+          <div class="caption">
+              <h6> Welcome To NI F</h6>
+              <h2><em>Wisata</em> Indonesia</h2>
+              <div class="main-button">
+                  <div class="scroll-to-section"><a href="{{url('data-wisata')}}">Lihat Data</a></div>
+              </div>
+          </div>
+      </div>
+  </section>
 @endsection
